@@ -14,6 +14,9 @@ module.exports = {
       zIndex: {
         "-50": "-50",
       },
+      minHeight: {
+        80: "20rem",
+      },
     },
   },
   variants: {
