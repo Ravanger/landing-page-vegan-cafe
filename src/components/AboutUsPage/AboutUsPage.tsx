@@ -1,5 +1,7 @@
+import ContentBox from "../common/ContentBox"
+
 const AboutUsPage = () => {
-  return <div>About Us</div>
+  return <ContentBox id="about">About Us</ContentBox>
 }
 
 export default AboutUsPage

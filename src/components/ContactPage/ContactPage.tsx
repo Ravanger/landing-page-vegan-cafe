@@ -1,5 +1,7 @@
+import ContentBox from "../common/ContentBox"
+
 const ContactPage = () => {
-  return <div>Contact Us</div>
+  return <ContentBox id="contact">Contact Us</ContentBox>
 }
 
 export default ContactPage

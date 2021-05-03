@@ -1,5 +1,7 @@
+import ContentBox from "../common/ContentBox"
+
 const HoursPage = () => {
-  return <div>Hours</div>
+  return <ContentBox id="hours">Hours</ContentBox>
 }
 
 export default HoursPage

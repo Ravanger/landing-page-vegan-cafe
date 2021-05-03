@@ -1,5 +1,7 @@
+import ContentBox from "../common/ContentBox"
+
 const LandingPage = () => {
-  return <div>Landing</div>
+  return <ContentBox id="landing">Landing</ContentBox>
 }
 
 export default LandingPage
