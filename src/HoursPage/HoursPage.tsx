@@ -1,5 +1,5 @@
 const HoursPage = () => {
-  return <div></div>
+  return <div>Hours</div>
 }
 
 export default HoursPage
