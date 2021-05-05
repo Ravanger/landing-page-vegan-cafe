@@ -2,7 +2,10 @@ import Spacer from "../Spacer"
 import { ContentBoxPropsType } from "./ContentBox.types"
 
 const ContentBox = (props: ContentBoxPropsType) => (
-  <div className="h-screen w-full flex flex-col justify-center" id={props.id}>
+  <div
+    className="min-h-screen w-full flex flex-col justify-center"
+    id={props.id}
+  >
     <section className="w-full flex flex-col items-center bg-darkGray bg-opacity-60 px-8 py-16 text-white">
       {props.title && (
         <>
