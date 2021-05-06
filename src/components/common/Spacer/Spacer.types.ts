@@ -1,5 +1,5 @@
 export interface SpacerPropTypes {
   size: string
-  axis: string
+  axis: "HORIZONTAL" | "VERTICAL"
   className?: string
 }
