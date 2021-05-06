@@ -5,7 +5,7 @@ const ExternalLink = (props: ExternalLinkPropsType) => (
     href={props.url}
     target="_blank"
     rel="noopener noreferrer"
-    className={props.className}
+    className={`p-4 ${props.className}`}
   >
     {props.children}
     <span className="sr-only">Opens in new window</span>
