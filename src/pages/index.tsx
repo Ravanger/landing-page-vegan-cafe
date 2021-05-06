@@ -5,6 +5,7 @@ import ContactPage from "../components/ContactPage"
 import BackgroundImage from "../components/common/BackgroundImage"
 import Spacer from "../components/common/Spacer"
 import Menu from "../components/common/Menu"
+import Footer from "../components/common/Footer"
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <Spacer />
         <ContactPage />
       </main>
+      <Footer />
     </div>
   )
 }

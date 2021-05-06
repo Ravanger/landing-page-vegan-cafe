@@ -7,7 +7,9 @@ const ContactPage = () => {
     <ContentBox id="contact" title="Contact">
       <Socials />
       <Spacer size="2rem" />
-      <span className="block text-4xl">(555) - 123 - 4567</span>
+      <span className="block text-4xl">
+        <a href="tel:+15551234567">(555) - 123 - 4567</a>
+      </span>
       <Spacer size="2rem" />
       <div className="relative">
         <span className="absolute w-full bg-darkGray bg-opacity-60 text-center p-2 text-lg">
