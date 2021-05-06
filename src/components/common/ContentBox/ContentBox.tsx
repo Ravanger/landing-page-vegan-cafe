@@ -13,7 +13,9 @@ const ContentBox = (props: ContentBoxPropsType) => (
           <Spacer size="2rem" />
         </>
       )}
-      {props.children}
+      <div className="max-w-xl w-full flex flex-col items-center">
+        {props.children}
+      </div>
     </section>
   </div>
 )

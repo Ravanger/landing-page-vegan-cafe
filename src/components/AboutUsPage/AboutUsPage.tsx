@@ -4,7 +4,7 @@ import Spacer from "../common/Spacer"
 const AboutUsPage = () => {
   return (
     <ContentBox id="about" title="About Us">
-      <div className="text-lg">
+      <div className="text-lg sm:text-2xl">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit
           tellus sed quam purus placerat risus donec. Mauris eu sed posuere

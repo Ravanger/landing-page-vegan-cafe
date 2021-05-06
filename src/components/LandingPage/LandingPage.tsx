@@ -6,8 +6,10 @@ const LandingPage = () => {
   return (
     <ContentBox id="landing">
       <div className="flex flex-col items-center">
-        <h1 className="text-6xl">The Green Goose</h1>
-        <span className="self-end text-2xl">Vegan café</span>
+        <div className="flex flex-col items-end">
+          <h1 className="text-6xl inline-block sm:text-8xl">The Green Goose</h1>
+          <span className="text-2xl sm:text-5xl">Vegan café</span>
+        </div>
         <Spacer size="2rem" />
         <ExternalLink
           url="https://placeholder.com/"
