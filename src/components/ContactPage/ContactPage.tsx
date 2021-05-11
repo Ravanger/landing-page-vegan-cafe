@@ -1,4 +1,5 @@
 import ContentBox from "../common/ContentBox"
+import ExternalLink from "../common/ExternalLink"
 import Socials from "../common/Socials"
 import Spacer from "../common/Spacer"
 
@@ -12,8 +13,13 @@ const ContactPage = () => {
       </span>
       <Spacer size="2rem" />
       <div className="relative">
-        <span className="absolute w-full bg-darkGray bg-opacity-60 text-center p-2 text-lg">
-          123 Address st, Toronto
+        <span className="absolute w-full bg-darkGray bg-opacity-60 text-center text-xl">
+          <ExternalLink
+            url="https://goo.gl/maps/CCbf1yMg2GGyoUJj8"
+            className="block"
+          >
+            123 Address st, Toronto
+          </ExternalLink>{" "}
         </span>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.269063974255!2d-79.38924548425987!3d43.64257006113557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d68bf33a9b%3A0x15edd8c4de1c7581!2sCN%20Tower!5e0!3m2!1sen!2sca!4v1620023038078!5m2!1sen!2sca"
