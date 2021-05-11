@@ -1,16 +1,21 @@
 import { useRef, useState } from "react"
 import { CgMenu } from "react-icons/cg"
+import { AiOutlineClose } from "react-icons/ai"
 import { MenuItemPropsType } from "./Menu.types"
 import Link from "next/link"
 import { useClickOutside } from "../../../util/clickHandlers"
 
-const MenuItem = (props: MenuItemPropsType) => (
-  <span className="text-4xl sm:text-3xl md:text-4xl text-white p-4 pl-0 sm:p-0 sm:pl-4 md:pl-8">
-    <Link href={`/#${props.id}`}>
-      <a onClick={props.closeMenu}>{props.text}</a>
-    </Link>
-  </span>
-)
+const MenuItem = (props: MenuItemPropsType) => {
+  const linkPath = `/#${props.id}`
+
+  return (
+    <span className="text-4xl transform active:scale-95 sm:text-3xl md:text-4xl text-white p-4 pl-0 sm:p-0 sm:pl-4 md:pl-8">
+      <Link href={linkPath}>
+        <a onClick={props.closeMenu}>{props.text}</a>
+      </Link>
+    </span>
+  )
+}
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,48 +35,34 @@ const Menu = () => {
           setIsOpen(!isOpen)
         }}
       >
-        <CgMenu size="2rem" />
+        {isOpen ? <AiOutlineClose size="2rem" /> : <CgMenu size="2rem" />}
       </button>
-      {
-        <Link href={`/#`}>
-          <a
-            onClick={() => setIsOpen(false)}
-            className={`sm:block ${!isOpen && "hidden"}`}
-          >
-            <h2 className="text-5xl sm:text-4xl md:text-5xl text-green">
-              The Green Goose
-            </h2>
-          </a>
-        </Link>
-      }
-      {
-        <nav
-          className={`flex flex-col col-start-2 justify-around sm:flex sm:flex-row ${
-            !isOpen && "hidden"
-          }`}
-        >
-          <MenuItem
-            text="Menu"
-            id="landing"
-            closeMenu={() => setIsOpen(false)}
-          />
-          <MenuItem
-            text="About us"
-            id="about"
-            closeMenu={() => setIsOpen(false)}
-          />
-          <MenuItem
-            text="Hours"
-            id="hours"
-            closeMenu={() => setIsOpen(false)}
-          />
-          <MenuItem
-            text="Contact"
-            id="contact"
-            closeMenu={() => setIsOpen(false)}
-          />
-        </nav>
-      }
+      <button
+        onClick={() => setIsOpen(false)}
+        className={`focus:outline-none sm:block ${!isOpen && "hidden"}`}
+      >
+        <h2 className="text-5xl sm:text-4xl md:text-5xl text-green">
+          The Green Goose
+        </h2>
+      </button>
+      <nav
+        className={`flex flex-col col-start-2 justify-around sm:flex sm:flex-row ${
+          !isOpen && "hidden"
+        }`}
+      >
+        <MenuItem text="Menu" id="landing" closeMenu={() => setIsOpen(false)} />
+        <MenuItem
+          text="About us"
+          id="about"
+          closeMenu={() => setIsOpen(false)}
+        />
+        <MenuItem text="Hours" id="hours" closeMenu={() => setIsOpen(false)} />
+        <MenuItem
+          text="Contact"
+          id="contact"
+          closeMenu={() => setIsOpen(false)}
+        />
+      </nav>
     </div>
   )
 }
